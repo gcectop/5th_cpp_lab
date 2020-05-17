@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#define pb push_back
 using namespace std;
 
 class complex{
@@ -12,10 +14,6 @@ public:
 	complex(){
 		real=0;
 		im=0;
-	}
-	void extend_init(int x,int y){
-		real=x;
-		im=y;
 	}
 	complex addition(complex a,complex b){
 	    complex result(0,0);
@@ -121,7 +119,7 @@ int main(){
 			temp.compare(a,b);
 		}
 	}*/
-	cout<<"Options:\nAddition(1)\nËxtreme(2)\n\nExit(0)\n";
+	cout<<"Options:\nAddition(1)\nÃ‹xtreme(2)\n\nExit(0)\n";
 	while(1){
 		int choice;
 		cin>>choice;
@@ -130,12 +128,13 @@ int main(){
 		}
 		int n;
 		cin>>n;
-		complex c[n];
+		vector<complex> c;
 		for(int i=0;i<n;i++){
 			int x,y;
 			cin>>x>>y;
 			//scanf("%lld+i(%lld)",&x,&y);
-			c[i].extend_init(x,y);
+			complex C(x,y);
+			c.pb(C);
 		}
 		if(choice==1){
 			int i,j;
