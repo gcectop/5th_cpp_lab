@@ -1,2 +1,5 @@
 # 5th_cpp_lab
- C++ lab codes for college
+
+This repository contains some basic lab assignments for C++ programming 
+
+
